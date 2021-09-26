@@ -35,12 +35,11 @@ app.post("/", function(req, res) {
 
   var jsonData = JSON.stringify(data)
 
-  const url = "https://us5.api.mailchimp.com/3.0/lists/3114a4b9d0"
-  //--------using "https" request method
+  const url = "https://us5.api.mailchimp.com/3.0/lists/{listID}"
 
   const options = {
     method: "POST",
-    auth: "Usman1:599d1ebda48392009ad1c6cd220adaef-us5"
+    auth: "Usman1:TOKEN"
   }
 
   const request = https.request(url, options, function(response) {
@@ -72,5 +71,5 @@ app.listen(port, function() {
 })
 
 
-//API Key: 599d1ebda48392009ad1c6cd220adaef-us5
-//Audience ID/ List ID: 3114a4b9d0
+//API Key: TOKEN
+//Audience ID/ List ID: ListID
